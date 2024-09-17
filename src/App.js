@@ -1,11 +1,13 @@
-import React from 'react'
-import Navbar from './components/Navbar'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import Home from './components/Home'
 
-function App() {
+const  App = () => {
   return (
-    <div>
-      <Navbar/>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path='/' component={Home} />
+      </Switch>
+    </BrowserRouter>
   )
 }
 
