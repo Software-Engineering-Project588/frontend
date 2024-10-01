@@ -1,40 +1,16 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+import './index.css'
 
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" href="#">Navbar</a>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav ml-auto">
-          <li className="nav-item active">
-            <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Features</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Pricing</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div className='nav-bar'>
+      <img src="https://img.freepik.com/premium-vector/aircraft-lamp-logo-design-innovative-sleek-vector-concept_579306-26262.jpg?w=740"
+       className='logo'
+       alt="logo"
+        />
+      <button className='logout-btn'>Logout</button>
+    </div>
   );
 };
 

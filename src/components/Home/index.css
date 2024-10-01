@@ -1,0 +1,23 @@
+.country-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.home-content{
+    padding: 20px;
+    height: 90vh;
+    background: fixed;
+    overflow-x: auto;
+}
+
+@media screen and (max-width: 576px) {
+    .country-list{
+        flex-direction: column;
+    }
+
+    .home-content{
+        padding: 0px;
+    }
+}
