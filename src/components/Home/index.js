@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { FaSearch } from "react-icons/fa"
 import CountryCard from '../CountryCard'
 import Navbar from '../Navbar'
 import './index.css'
@@ -8,7 +9,7 @@ const countriesList = [
     id: 1,
     country: "United States",
     description: "Home to top universities like Harvard and MIT, the U.S. offers diverse programs and cultures. Experience a mix of innovation and tradition in education.",
-    imageUrl: "https://img.freepik.com/free-photo/dunster-house-cambridge-usa_1268-14362.jpg?semt=ais_hybrid" 
+    imageUrl: "https://img.freepik.com/free-photo/dunster-house-cambridge-usa_1268-14362.jpg?semt=ais_hybrid",
   },
   {
     id: 2,
@@ -132,13 +133,25 @@ const countriesList = [
   }
 ];
 
+const handleSearch = (event, setSearch, setFilteredCountries) => {
+  setSearch(event.target.value)
+  const filteredCountries = countriesList.filter(eachItem => eachItem.country.toLowerCase().includes(event.target.value.toLowerCase()))
+  setFilteredCountries(filteredCountries)
+}
+
 const Home = () => {
+  const [search, setSearch] = useState("")
+  const [filteredCountries, setFilteredCountries] = useState(countriesList)
   return (
     <div>
       <Navbar />
       <div className='home-content'>
+        <div className='search-container'>
+          <input type="search" value={search} placeholder='Search' onChange={(event)=> handleSearch(event, setSearch, setFilteredCountries)} className='search-input' />
+          <FaSearch className='search-icon' />
+        </div>
         <div className='country-list'>
-          {countriesList.map(eachItem => <CountryCard item={eachItem} key={eachItem.id} />)}
+          {filteredCountries.map(eachItem => <CountryCard item={eachItem} key={eachItem.id} />)}
         </div>
       </div>
     </div>
