@@ -1,13 +1,6 @@
-.country-list{
-    display: flex;
-    align-items: center;
-    justify-content: space-start;
-    gap: 30px;
-    flex-wrap: wrap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
 
 .home-content{
-    padding: 20px;
     height: 90vh;
     background: fixed;
     overflow-x: auto;
@@ -15,32 +8,58 @@
     flex-direction: column;
 }
 
-.search-container{
-    align-self: center;
+.banner-section{
+    background-image: url('https://img.freepik.com/free-photo/detailed-structure-marble-natural-pattern-background-design_1258-77564.jpg?t=st=1728463576~exp=1728467176~hmac=4e74ef6d85e0b08078e9325344920dad1f24b0a2bd15ad16db9c2afe7fdf6c73&w=740');
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 5px;
-    border: 1px solid #000;
-    padding: 5px;
-    margin-top: 10px;
+    gap: 30px;
+    align-self: center;
 }
 
-.search-input{
+.banner-left{
     width: 300px;
-    height: 30px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    font-weight: 500;
 }
 
-@media screen and (max-width: 576px) {
-    .country-list{
-        flex-direction: column;
-    }
+.banner-heading{
+    font-weight: bold;
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
-    .home-content{
-        padding: 0px;
+.banner-description{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.banner-btn{
+    color: #ffffff;
+    background-color: rgb(47, 111, 47);
+    border: none;
+    font-family: 'Roboto';
+    height: 40px;
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.banner-img{
+    width: 700px;
+}
+
+.why-abroad-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media Screen and (max-width: 576px)
+{
+    .banner-right{
+        display: none;
     }
+    .banner-left{
+        padding-bottom: 10px;
+    }
+    
 }

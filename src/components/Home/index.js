@@ -1,6 +1,4 @@
-import React, { useState } from 'react'
-import { FaSearch } from "react-icons/fa"
-import CountryCard from '../CountryCard'
+import BenefitCard from '../BenefitCard';
 import Navbar from '../Navbar'
 import './index.css'
 
@@ -133,25 +131,42 @@ const countriesList = [
   }
 ];
 
-const handleSearch = (event, setSearch, setFilteredCountries) => {
-  setSearch(event.target.value)
-  const filteredCountries = countriesList.filter(eachItem => eachItem.country.toLowerCase().includes(event.target.value.toLowerCase()))
-  setFilteredCountries(filteredCountries)
-}
+const benefits = [
+  {
+    title: "Invest in Your Future",
+    description: "Expand your understanding of the world and build skills and experiences that employers value. Differentiate your resume from peers, expand your employment options, improve your odds of getting hired faster and your chances of a higher starting salary."
+  },
+  {
+    title: "Learn a Language",
+    description: "Learn a new language or improve your language skills by living in and navigating a new country, or through robust dialogue in an integrated classroom with other students. API’s resident directors further support you through conversation practice and tutoring. The ability to speak more than one language opens employment doors, as potential employers value multilingualism and the ability to communicate with individuals of different cultural and language backgrounds."
+  },
+  {
+    title: "Build Confidence & Independence",
+    description: "Feel empowered to explore your new host country and visit nearby cities and towns, all while receiving the support of API resident directors to assist with any need that arises. Your newfound confidence will be easily recognizable by future employers and will help you have stronger interviews."
+  },
+  {
+    title: "Change the World",
+    description: "Engage directly with the global community, shifting your world view and forming new, global connections that break down barriers and foster understanding. What's more, you'll learn skills that have real-world application, such as the value of teamwork and the true impact that goodwill and coordination can have on a local community. These skills and competencies will be valued and appreciated by future employers, graduate schools and beyond."
+  }
+];
 
 const Home = () => {
-  const [search, setSearch] = useState("")
-  const [filteredCountries, setFilteredCountries] = useState(countriesList)
   return (
     <div>
       <Navbar />
       <div className='home-content'>
-        <div className='search-container'>
-          <input type="search" value={search} placeholder='Search' onChange={(event)=> handleSearch(event, setSearch, setFilteredCountries)} className='search-input' />
-          <FaSearch className='search-icon' />
+        <div className='banner-section'>
+          <div className='banner-left'>
+            <h1 className='banner-heading'>STUDY ABROAD</h1>
+            <p className='banner-description'>Attend prestigious universities across the globe, complete courses in virtually any area of study, and immerse yourself in another country’s language, lifestyle and culture. </p>
+            <button className='banner-btn'>FIND MY PROGRAM</button>
+          </div>
+          <div className='banner-right'>
+            <img src='https://img.freepik.com/premium-vector/education-travel-concept-man-woman-standing-together_1332476-3262.jpg?w=1380' alt='banner-img' className='banner-img' />
+          </div>
         </div>
-        <div className='country-list'>
-          {filteredCountries.map(eachItem => <CountryCard item={eachItem} key={eachItem.id} />)}
+        <div className='why-abroad-section'>
+          {benefits.map(eachItem => <BenefitCard data={eachItem} />)}
         </div>
       </div>
     </div>
