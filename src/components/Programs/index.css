@@ -1,0 +1,16 @@
+.programs-content{
+    padding-top: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-bar{
+    display: flex;
+    align-self: center;
+    align-self: center;
+}
+
+.search-input{
+    width: 300px;
+    padding: 10px;
+}
