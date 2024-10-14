@@ -10,11 +10,46 @@ const Navbar = (props) => {
 
   return (
     <div className='nav-bar'>
-      <img src="https://img.freepik.com/premium-vector/aircraft-lamp-logo-design-innovative-sleek-vector-concept_579306-26262.jpg?w=740"
-       className='logo'
-       alt="logo"
+      <div className='left-container'>
+        <img src="https://img.freepik.com/premium-vector/aircraft-lamp-logo-design-innovative-sleek-vector-concept_579306-26262.jpg?w=740"
+         className='logo'
+         alt="logo"
         />
-      <button className='logout-btn' onClick={onLogout}>Logout</button>
+      </div>
+      <div className='right-container'>
+        <div className="dropdown">
+          <p className="dropdown-toggle">Home</p>
+          <div className="dropdown-content">
+            <a href="#">Dashboard</a>
+            <a href="#">Profile</a>
+          </div>
+        </div>
+        <div className="dropdown">
+          <p className="dropdown-toggle">Products</p>
+          <div className="dropdown-content">
+            <a href="#">Category 1</a>
+            <a href="#">Category 2</a>
+            <a href="#">Category 3</a>
+          </div>
+        </div>
+        <div className="dropdown">
+          <p className="dropdown-toggle">Services</p>
+          <div className="dropdown-content">
+            <a href="#">Service A</a>
+            <a href="#">Service B</a>
+            <a href="#">Service C</a>
+          </div>
+        </div>
+        <div className="dropdown">
+          <p className="dropdown-toggle">Contact</p>
+          <div className="dropdown-content">
+            <a href="#">Email</a>
+            <a href="#">Phone</a>
+            <a href="#">Address</a>
+          </div>
+        </div>
+        <button className='logout-btn' onClick={onLogout}>Logout</button>
+      </div>
     </div>
   );
 };

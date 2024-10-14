@@ -1,7 +1,7 @@
 import './index.css'
 
 const BenefitCard = props => {
-    const {data} = props
+    const data = props
     const {title, description} = data
     return (
         <div className='benefit-card'>

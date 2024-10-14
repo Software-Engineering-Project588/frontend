@@ -1,0 +1,33 @@
+.card{
+    min-height: 220px;
+    width: 26%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 0px rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+}
+
+.card-heading{
+    font-size: 22px;
+    font-weight: 600;
+    color: #1E264C;
+    margin-bottom: 10px;
+}
+
+p{
+    font-size: 14px;
+    color: #1E264C;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.card:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}

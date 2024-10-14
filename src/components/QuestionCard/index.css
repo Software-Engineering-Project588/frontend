@@ -1,0 +1,50 @@
+.question-card {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    background-color: #E3E7F3;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    min-height: 203px;
+}
+
+.question-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.question-card:nth-child(2){
+    height: 160px;
+}
+
+.question {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1E264C;
+    margin-bottom: 10px;
+}
+
+.answer {
+    font-weight: 400;
+    color: #333;
+    background-color: transparent;
+    padding: 10px 0;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.answer p{
+    font-size: 16px;
+}
+
+.question-card:hover .answer {
+    opacity: 1;
+    max-height: 500px;
+}

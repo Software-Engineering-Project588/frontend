@@ -1,65 +1,323 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+ 
 .home-content{
-    height: 90vh;
     background: fixed;
     overflow-x: auto;
     display: flex;
     flex-direction: column;
+    padding-top: 100px;
 }
 
 .banner-section{
-    background-image: url('https://img.freepik.com/free-photo/detailed-structure-marble-natural-pattern-background-design_1258-77564.jpg?t=st=1728463576~exp=1728467176~hmac=4e74ef6d85e0b08078e9325344920dad1f24b0a2bd15ad16db9c2afe7fdf6c73&w=740');
+    /* background-image: url('https://img.freepik.com/free-photo/detailed-structure-marble-natural-pattern-background-design_1258-77564.jpg?t=st=1728463576~exp=1728467176~hmac=4e74ef6d85e0b08078e9325344920dad1f24b0a2bd15ad16db9c2afe7fdf6c73&w=740'); */
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 30px;
     align-self: center;
+    padding: 20px 40px;
 }
 
 .banner-left{
-    width: 300px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 40px;
 }
 
 .banner-heading{
-    font-weight: bold;
-    font-size: 50px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 800;
+    font-size: 59px;
+    color: #1E264C;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 0.95;
+    width: 400px;
 }
 
 .banner-description{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Montserrat', sans-serif;
+    width: 450px;
+    text-align: start;
+    font-size: 16px;
+    color: #1E264C;
+    opacity: 0.9;
+    padding-bottom: 20px;
 }
 
 .banner-btn{
     color: #ffffff;
-    background-color: rgb(47, 111, 47);
+    background-color: #007F80;
     border: none;
-    font-family: 'Roboto';
+    font-family: 'Montserrat', sans-serif;
     height: 40px;
-    width: 200px;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 230px;
+    cursor: pointer;
+    letter-spacing: 1px;
     padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.banner-btn span{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.banner-btn:hover{
+    background-color: #059696;
+    color: #ffffff;
 }
 
 .banner-img{
     width: 700px;
+    height: 500px;
+    object-fit: cover;
 }
 
-.why-abroad-section{
+.benefits-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.benefits-heading{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: #1E264C;
+    padding: 20px;
+}
+
+.benefits-cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.suggestion{
+    background-image: url("https://images.pexels.com/photos/3374289/pexels-photo-3374289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 40px 150px;
+    color: #1E264C;
+    
+}
+.suggestion-heading{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    color: #1E264C;
+    padding-bottom: 20px;
+}
+
+.suggestion-description{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #1E264C;
+    padding-bottom: 20px;
+}
+
+.suggestion-yellow{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: red;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+.faq-main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.faq-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: #1E264C;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.faq-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
 }
 
-@media Screen and (max-width: 576px)
-{
+.faq-btn{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #007F80;
+    color: #ffffff;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 20px;
+}
+
+.faq-btn:hover{
+    background-color: #059696;
+}
+
+.facilities-section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.facilities-cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
+}
+
+.facilities-heading{
+    font-weight: 600;
+    color: #1E264C;
+    font-size:35px;
+}
+
+.joinUs{
+    width: 70%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    background-color: #EFEFEF;
+    margin: auto;
+}
+
+.joinUs-heading{
+    font-weight: 600;
+    font-size: 28px;
+    padding-bottom: 20px;
+    color: #1E264C;
+}
+
+.joinUs-p{
+    font-size: 15px;
+    line-height: 1.3;
+    padding-bottom: 20px;
+    color: #1E264C;
+    opacity: 1;
+}
+
+.joinUs-btn{
+    background-color: #1E264C;
+    color: #ffffff;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.joinUs-btn:active{
+    scale: 0.95;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .banner-img{
+        width: 500px;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .banner-img{
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .banner-img{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 576px) {
     .banner-right{
         display: none;
     }
     .banner-left{
         padding-bottom: 10px;
+        width: 240px;
+        padding-left: 0px;
+    }
+    .banner-section{
+        padding: 0px;
     }
     
+    .banner-heading{
+        font-size: 50px;
+        width: 240px;
+    }
+
+    .banner-description{
+        width: 240px;
+    }
+    
+    .benefits-cards{
+        padding: 0px;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .faq-main {
+        padding: 20px 10px;
+    }
+
+    .faq-heading {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .faq-section {
+        gap: 10px;
+    }
 }
