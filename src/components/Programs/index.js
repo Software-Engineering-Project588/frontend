@@ -8,7 +8,7 @@ const Programs = () => {
     const [searchValue, updateSearchValue] = useState('');
 
     const getData = async () => {
-        const url = `http://universities.hipolabs.com/search?country=${searchValue}`;
+        const url = `http://universities.hipolabs.com/search`;
         try {
             const response = await fetch(url);
             if (!response.ok) {
@@ -24,14 +24,16 @@ const Programs = () => {
     const onSearch = (event) => {
         const newValue = event.target.value;
         updateSearchValue(newValue);
-        getData(); // Fetch data when search value changes
     };
 
     useEffect(() => {
         getData();
     }, []);
 
-    
+    const filteredList = countriesList.filter((item) =>
+        item.name.toLowerCase().includes(searchValue.toLowerCase()) ||
+        (item.country && item.country.toLowerCase().includes(searchValue.toLowerCase()))
+    );
 
     return (
         <div className='programs-container'>
@@ -41,12 +43,12 @@ const Programs = () => {
                     <input
                         className='search-input'
                         type='search'
-                        placeholder='Search for a country'
+                        placeholder='Search for a country or university'
                         value={searchValue}
                         onChange={onSearch}
                     />
                 </div>
-                {countriesList.map((eachItem, index) => (
+                {filteredList.map((eachItem, index) => (
                     <CollegeCard data={eachItem} key={index} />
                 ))}
             </div>
