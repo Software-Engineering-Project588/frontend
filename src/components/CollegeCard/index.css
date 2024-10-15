@@ -55,3 +55,15 @@
 .college-card a:active{
     scale: 0.95;
 }
+
+@media screen and (max-width: 576px) {
+    .college-card{
+        width: 90%;
+    }
+    .college-heading{
+        font-size: 18px;
+    }
+    .college-country{
+        font-size: 12px;
+    }
+}

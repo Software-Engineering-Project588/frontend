@@ -1,8 +1,8 @@
-import {withRouter} from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 import Cookies from 'js-cookie'
 import './index.css'
 
-const Navbar = (props) => { 
+const Navbar = (props) => {
   const onLogout = () => {
     Cookies.remove('jwt_token')
     props.history.replace('/login')
@@ -11,19 +11,19 @@ const Navbar = (props) => {
   return (
     <div className='nav-bar'>
       <div className='left-container'>
-        <img src="https://img.freepik.com/premium-vector/aircraft-lamp-logo-design-innovative-sleek-vector-concept_579306-26262.jpg?w=740"
-         className='logo'
-         alt="logo"
-        />
+        <Link to='/'>
+          <img src="https://img.freepik.com/premium-vector/aircraft-lamp-logo-design-innovative-sleek-vector-concept_579306-26262.jpg?w=740"
+            className='logo'
+            alt="logo"
+          />
+        </Link>
       </div>
       <div className='right-container'>
-        <div className="dropdown">
-          <p className="dropdown-toggle">Home</p>
-          <div className="dropdown-content">
-            <a href="#">Dashboard</a>
-            <a href="#">Profile</a>
-          </div>
-        </div>
+        <Link to='/'>
+          <button className="dropdown-toggle">
+            Home
+          </button>
+        </Link>
         {/* <div className="dropdown">
           <p className="dropdown-toggle">Products</p>
           <div className="dropdown-content">
