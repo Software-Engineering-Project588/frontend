@@ -14,3 +14,7 @@
     width: 300px;
     padding: 10px;
 }
+
+.search-icon{
+    cursor: pointer;
+}

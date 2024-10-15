@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import BenefitCard from '../BenefitCard';
 import Navbar from '../Navbar'
 import './index.css'
@@ -21,37 +22,37 @@ const countriesList = [
     id: 3,
     country: "Canada",
     description: "Known for its welcoming environment and high-quality education, Canada is home to world-class universities like the University of Toronto.",
-    imageUrl: "https://img.freepik.com/free-photo/ottawa-parliament-hill-building_649448-3632.jpg?semt=ais_hybrid" 
+    imageUrl: "https://img.freepik.com/free-photo/ottawa-parliament-hill-building_649448-3632.jpg?semt=ais_hybrid"
   },
   {
     id: 4,
     country: "Australia",
     description: "With stunning landscapes and vibrant cities, Australia offers excellent education opportunities at institutions like the University of Melbourne.",
-    imageUrl: "https://img.freepik.com/free-photo/beautiful-shot-sydney-harbor-bridge-with-light-pink-blue-sky_181624-16041.jpg?semt=ais_hybrid" 
+    imageUrl: "https://img.freepik.com/free-photo/beautiful-shot-sydney-harbor-bridge-with-light-pink-blue-sky_181624-16041.jpg?semt=ais_hybrid"
   },
   {
     id: 5,
     country: "Germany",
     description: "Famous for its strong engineering programs and no tuition fees for international students, Germany is a top choice for higher education.",
-    imageUrl: "https://img.freepik.com/free-photo/building-with-columns_1160-803.jpg?semt=ais_hybrid" 
+    imageUrl: "https://img.freepik.com/free-photo/building-with-columns_1160-803.jpg?semt=ais_hybrid"
   },
   {
     id: 6,
     country: "France",
     description: "A hub of culture and art, France is home to prestigious institutions like Sorbonne University, providing a rich educational experience.",
-    imageUrl: "https://img.freepik.com/free-vector/sorbonne-university-paris-historic-european-landmark_1308-160042.jpg?semt=ais_hybrid" 
+    imageUrl: "https://img.freepik.com/free-vector/sorbonne-university-paris-historic-european-landmark_1308-160042.jpg?semt=ais_hybrid"
   },
   {
     id: 7,
     country: "Japan",
     description: "Combining tradition and modernity, Japan offers excellent education with a focus on technology and innovation at universities like the University of Tokyo.",
-    imageUrl: "https://img.freepik.com/free-photo/front-osaka-castle-japan-blue-sky_1150-10905.jpg?semt=ais_hybrid" 
+    imageUrl: "https://img.freepik.com/free-photo/front-osaka-castle-japan-blue-sky_1150-10905.jpg?semt=ais_hybrid"
   },
   {
     id: 8,
     country: "Netherlands",
     description: "Renowned for its high-quality education system and a wide range of English-taught programs, the Netherlands is a popular destination for international students.",
-    imageUrl: "https://img.freepik.com/free-photo/beautiful-shot-historic-binnenhof-castle-netherlands_181624-41940.jpg?semt=ais_hybrid" 
+    imageUrl: "https://img.freepik.com/free-photo/beautiful-shot-historic-binnenhof-castle-netherlands_181624-41940.jpg?semt=ais_hybrid"
   },
   {
     id: 9,
@@ -212,10 +213,6 @@ const programAssistance = [
   }
 ];
 
-
-
-
-
 const Home = () => {
   return (
     <div>
@@ -225,52 +222,54 @@ const Home = () => {
           <div className='banner-left'>
             <h1 className='banner-heading'>STUDY ABROAD</h1>
             <p className='banner-description'>Attend prestigious universities across the globe, complete courses in virtually any area of study, and immerse yourself in another country’s language, lifestyle and culture. </p>
-            <button className='banner-btn'>FIND MY PROGRAM <span>{">"}</span></button>
+            <Link to='/colleges'>
+              <button className='banner-btn'>FIND MY PROGRAM <span>{">"}</span></button>
+            </Link>
           </div>
           <div className='banner-right'>
             <img src='https://img.freepik.com/premium-vector/education-travel-concept-man-woman-standing-together_1332476-3262.jpg?w=1380' alt='banner-img' className='banner-img' />
           </div>
         </div>
       </div>
-        <div className='benefits-section'>
-          <h1 className='benefits-heading'>WHY STUDY ABROAD?</h1>
-          <div className='benefits-cards'>
-            {benefits.map((benefit) => (
-              <BenefitCard key={benefit.id} title={benefit.title} description={benefit.description} />
-            ))}
-          </div>
+      <div className='benefits-section'>
+        <h1 className='benefits-heading'>WHY STUDY ABROAD?</h1>
+        <div className='benefits-cards'>
+          {benefits.map((benefit) => (
+            <BenefitCard key={benefit.id} title={benefit.title} description={benefit.description} />
+          ))}
         </div>
-        <div className='suggestion'>
-          <h1 className='suggestion-heading'>Fare Finder™</h1>
-          <p className='suggestion-description'>If you're looking to book travel for an academic experience, you are likely searching for the most affordable deal. In an effort to reduce financial barriers and increase access, we are offering the Fare Finder™ app right inside of APIConnect to provide access to discounted airfare for academic travel. With Fare Finder, we're making educational travel simpler and more accessible than ever before. .</p>
-          <p className='suggestion-yellow'>Learn More about Fare Finder</p>
+      </div>
+      <div className='suggestion'>
+        <h1 className='suggestion-heading'>Fare Finder™</h1>
+        <p className='suggestion-description'>If you're looking to book travel for an academic experience, you are likely searching for the most affordable deal. In an effort to reduce financial barriers and increase access, we are offering the Fare Finder™ app right inside of APIConnect to provide access to discounted airfare for academic travel. With Fare Finder, we're making educational travel simpler and more accessible than ever before. .</p>
+        <p className='suggestion-yellow'>Learn More about Fare Finder</p>
+      </div>
+      <div className='faq-main'>
+        <h1 className='faq-heading'>Answers to Your Most Common Questions</h1>
+        <div className='faq-section'>
+          {faqs.map((faq) => (
+            <QuestionCard key={faq.id} question={faq.question} answer={faq.answer} />
+          ))}
         </div>
-        <div className='faq-main'>
-          <h1 className='faq-heading'>Answers to Your Most Common Questions</h1>
-          <div className='faq-section'>
-            {faqs.map((faq) => (
-              <QuestionCard key={faq.id} question={faq.question} answer={faq.answer} />
-            ))}
-          </div>
-          <button className='faq-btn'>VIEW ALL FAQS</button>
+        <button className='faq-btn'>VIEW ALL FAQS</button>
+      </div>
+      <div className='facilities-section'>
+        <h1 className='facilities-heading'>What's Included</h1>
+        <div className='facilities-cards'>
+          {programAssistance.map((program) => {
+            return <FacilitiesCard key={program.id} title={program.title} description={program.description} />
+          })}
         </div>
-        <div className='facilities-section'>
-          <h1 className='facilities-heading'>What's Included</h1>
-          <div className='facilities-cards'>
-             {programAssistance.map((program) => {
-               return <FacilitiesCard key={program.id} title={program.title} description={program.description} />
-             })}
-          </div>
-        </div>
-        <div className='joinUs'>
-          <h1 className='joinUs-heading'>Combine your study abroad with virtual, accredited coursework for an even more robust outcome</h1>
-          <p className='joinUs-p'>Experience the world from anywhere in the world with API’s virtual programs. You’ll gain the flexibility to take a class in the morning and go on an excursion in the afternoon. Tackle global challenges, study a new language with native speakers, give your resume a global edge, and more! Explore our virtual programs and customize them to your schedule!</p>
-         <button  className='joinUs-btn'>LEARN MORE →</button>
+      </div>
+      <div className='joinUs'>
+        <h1 className='joinUs-heading'>Combine your study abroad with virtual, accredited coursework for an even more robust outcome</h1>
+        <p className='joinUs-p'>Experience the world from anywhere in the world with API’s virtual programs. You’ll gain the flexibility to take a class in the morning and go on an excursion in the afternoon. Tackle global challenges, study a new language with native speakers, give your resume a global edge, and more! Explore our virtual programs and customize them to your schedule!</p>
+        <button className='joinUs-btn'>LEARN MORE →</button>
 
-        </div>
-        <div className='footer'>
-           
-        </div>
+      </div>
+      <div className='footer'>
+
+      </div>
     </div>
   )
 }
