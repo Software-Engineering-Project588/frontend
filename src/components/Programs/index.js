@@ -58,7 +58,7 @@ const Programs = () => {
             case API_STATUS.INITIAL:
                 return <p>Welcome! Start by searching for a university or country.</p>;
             case API_STATUS.IN_PROGRESS:
-                return <p>Loading universities...</p>;
+                return <p className='loading'>Loading universities...</p>;
             case API_STATUS.FAILURE:
                 return <p className="error-message">Failed to fetch universities. Please try again later.</p>;
             case API_STATUS.SUCCESS:

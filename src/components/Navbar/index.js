@@ -24,7 +24,7 @@ const Navbar = (props) => {
             <a href="#">Profile</a>
           </div>
         </div>
-        <div className="dropdown">
+        {/* <div className="dropdown">
           <p className="dropdown-toggle">Products</p>
           <div className="dropdown-content">
             <a href="#">Category 1</a>
@@ -47,7 +47,7 @@ const Navbar = (props) => {
             <a href="#">Phone</a>
             <a href="#">Address</a>
           </div>
-        </div>
+        </div> */}
         <button className='logout-btn' onClick={onLogout}>Logout</button>
       </div>
     </div>

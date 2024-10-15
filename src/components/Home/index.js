@@ -220,10 +220,10 @@ const Home = () => {
       <div className='home-content'>
         <div className='banner-section'>
           <div className='banner-left'>
-            <h1 className='banner-heading'>STUDY ABROAD</h1>
+            <h1 className='banner-heading'>STUDY ABROAD</h1> 
             <p className='banner-description'>Attend prestigious universities across the globe, complete courses in virtually any area of study, and immerse yourself in another country’s language, lifestyle and culture. </p>
-            <Link to='/colleges'>
-              <button className='banner-btn'>FIND MY PROGRAM <span>{">"}</span></button>
+            <Link className="link-button" to='/colleges'>
+              <button className='banner-btn'>FIND MY PROGRAM</button>
             </Link>
           </div>
           <div className='banner-right'>

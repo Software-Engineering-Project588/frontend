@@ -1,5 +1,57 @@
+
+
+
+.colleges-page{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
 .college-card{
-    width: 80%;
-    border: 1px solid #0f0f0f;
+    width: 40%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 10px;
+    height: fit-content;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.college-card:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.college-heading{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.college-country{
+    font-size: 15px;
+    opacity: 0.9;
+    padding: 10px;
+}
+
+.college-card a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+    margin: 5px;
+    background-color: #007F80;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.college-card a:hover{
+    background-color: #028e91;
+}
+
+.college-card a:active{
+    scale: 0.95;
 }
