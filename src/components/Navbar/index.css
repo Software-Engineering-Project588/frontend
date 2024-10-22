@@ -36,6 +36,7 @@
 }
 
 .dropdown-toggle{
+    margin-top: 2px;
     cursor: pointer;
     padding: 10px;
     border: none;
