@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { FaSearch } from "react-icons/fa";
 import './index.css';
 import Navbar from '../Navbar';
 import CollegeCard from '../CollegeCard';
+import dataSet from '../data';
 
 // API status constants
 const API_STATUS = {
@@ -13,28 +14,10 @@ const API_STATUS = {
 };
 
 const Programs = () => {
-    const [countriesList, setCountriesList] = useState([]);
+    const [countriesList] = useState(dataSet); // Using dataSet directly
     const [searchValue, updateSearchValue] = useState('');
-    const [filteredList, setFilteredList] = useState([]);
-    const [apiStatus, setApiStatus] = useState(API_STATUS.INITIAL);
-
-    const getData = async () => {
-        setApiStatus(API_STATUS.IN_PROGRESS);
-        const url = `http://universities.hipolabs.com/search`;
-        try {
-            const response = await fetch(url);
-            if (!response.ok) {
-                throw new Error(`Error: ${response.status}`);
-            }
-            const data = await response.json();
-            setCountriesList(data);
-            setFilteredList(data);  // Initialize with all items
-            setApiStatus(API_STATUS.SUCCESS);
-        } catch (error) {
-            console.error("Failed to fetch data:", error);
-            setApiStatus(API_STATUS.FAILURE);
-        }
-    };
+    const [filteredList, setFilteredList] = useState(dataSet); // Initialize with all items
+    const [apiStatus, setApiStatus] = useState(API_STATUS.SUCCESS); // No API, so directly set SUCCESS
 
     const onSearch = (event) => {
         updateSearchValue(event.target.value);
@@ -43,30 +26,22 @@ const Programs = () => {
     const onSearchSubmit = (event) => {
         event.preventDefault();
         const updatedList = countriesList.filter((item) =>
-            item.name.toLowerCase().includes(searchValue.toLowerCase()) ||
+            item.collegeName.toLowerCase().includes(searchValue.toLowerCase()) ||
             (item.country && item.country.toLowerCase().includes(searchValue.toLowerCase()))
         );
         setFilteredList(updatedList);
     };
 
-    useEffect(() => {
-        getData();
-    }, []);
-
     const renderContent = () => {
         switch (apiStatus) {
             case API_STATUS.INITIAL:
                 return <p>Welcome! Start by searching for a university or country.</p>;
-            case API_STATUS.IN_PROGRESS:
-                return <p className='loading'>Loading universities...</p>;
-            case API_STATUS.FAILURE:
-                return <p className="error-message">Failed to fetch universities. Please try again later.</p>;
             case API_STATUS.SUCCESS:
                 return (
                     <>
                         {filteredList.length > 0 ? (
-                            filteredList.map((eachItem, index) => (
-                                <CollegeCard data={eachItem} key={index} />
+                            filteredList.map((eachItem) => (
+                                <CollegeCard data={eachItem} key={eachItem.id} />
                             ))
                         ) : (
                             <p>No results found for "{searchValue}".</p>
