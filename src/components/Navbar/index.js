@@ -1,12 +1,16 @@
 import { withRouter, Link } from 'react-router-dom'
+import { useContext } from 'react';
 import Cookies from 'js-cookie'
 import './index.css'
+import { WishlistContext } from '../WishListContext';
 
 const Navbar = (props) => {
   const onLogout = () => {
     Cookies.remove('jwt_token')
     props.history.replace('/login')
   }
+
+  const {wishlist} = useContext(WishlistContext)
 
   return (
     <div className='nav-bar'>
@@ -22,6 +26,11 @@ const Navbar = (props) => {
         <Link to='/'>
           <button className="dropdown-toggle">
             Home
+          </button>
+        </Link>
+        <Link to='/wish-list'>
+          <button className="dropdown-toggle">
+            WishList({wishlist?.length})
           </button>
         </Link>
         {/* <div className="dropdown">
