@@ -4,6 +4,7 @@ import Navbar from '../Navbar'
 import './index.css'
 import QuestionCard from '../QuestionCard'
 import FacilitiesCard from '../FacilitiesCard'
+import Footer from '../Footer'
 
 
 
@@ -141,7 +142,7 @@ const Home = () => {
 
       </div>
       <div className='footer'>
-
+          <Footer/>
       </div>
     </div>
   )

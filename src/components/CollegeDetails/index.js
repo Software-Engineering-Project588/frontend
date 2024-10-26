@@ -3,6 +3,8 @@ import './index.css';
 import dataSet from '../data';
 import Navbar from '../Navbar';
 import { WishlistContext } from '../WishListContext';
+import Footer from '../Footer';
+import { SiGooglemaps } from "react-icons/si";
 
 const CollegeDetails = (props) => {
     const [data, setData] = useState(null);
@@ -108,9 +110,12 @@ const CollegeDetails = (props) => {
                         <p>Type of Room: <span>{accommodation.typeOfRoom}</span></p>
                         <p>Area: <span>{accommodation.areaName}</span></p>
                         <p>Cost: <span>{accommodation.cost}</span></p>
+                        <a className='map' href='https://maps.app.goo.gl/VvvJ9HFcjWwcXG9g6'><SiGooglemaps />
+                        </a>
                     </div>
                 ))}
             </div>
+            <Footer />
         </div>
     );
 };

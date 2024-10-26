@@ -16,6 +16,7 @@ const App = () => {
           <Route exact path='/colleges' component={Programs} />
           <Route exact path='/college/:id' component={CollegeDetails} />
           <Route exact path='/wish-list' component={WishList} />
+          
         </Switch>
       </BrowserRouter>
     </WishlistProvider>
