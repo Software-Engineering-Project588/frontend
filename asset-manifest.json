@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/https/://AkhilReddy588.github.io/frontend/static/css/main.f1b1eff0.css",
+    "main.js": "/https/://AkhilReddy588.github.io/frontend/static/js/main.bdf8d383.js",
+    "static/js/453.285f2740.chunk.js": "/https/://AkhilReddy588.github.io/frontend/static/js/453.285f2740.chunk.js",
+    "index.html": "/https/://AkhilReddy588.github.io/frontend/index.html",
+    "main.f1b1eff0.css.map": "/https/://AkhilReddy588.github.io/frontend/static/css/main.f1b1eff0.css.map",
+    "main.bdf8d383.js.map": "/https/://AkhilReddy588.github.io/frontend/static/js/main.bdf8d383.js.map",
+    "453.285f2740.chunk.js.map": "/https/://AkhilReddy588.github.io/frontend/static/js/453.285f2740.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f1b1eff0.css",
+    "static/js/main.bdf8d383.js"
+  ]
+}
