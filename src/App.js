@@ -8,6 +8,7 @@ import { AppliedDataProvider } from './components/AppliedDataContext'; // Import
 import WishList from './components/WishList';
 import Apply from './components/Apply';
 import AppliedColleges from './components/AppliedColleges';
+import RegisterPage from './components/RegisterPage';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
             <Route exact path='/wish-list' component={WishList} />
             <Route exact path='/apply-form/:id' component={Apply} />
             <Route exact path='/applied' component={AppliedColleges} />
+            <Route exact path='/register' component={RegisterPage} />
           </Switch>
         </BrowserRouter>
       </AppliedDataProvider>
