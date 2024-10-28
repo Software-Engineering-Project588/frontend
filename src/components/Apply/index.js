@@ -82,47 +82,51 @@ const Apply = (props) => {
     };
 
     return (
-        <div>
+        <div  className="container">
+
             <Navbar />
             <div className="apply-content">
                 {data && (
                     <form onSubmit={handleSubmit}>
-                        <h2>Apply to {data.collegeName}</h2>
+                        <h2 className='apply-heading'>Apply to {data.collegeName}</h2>
                         
-                        <div>
+                        <div className='input-cont'>
                             <label>First Name</label>
                             <input
                                 type="text"
                                 name="firstName"
                                 value={formValues.firstName}
                                 onChange={handleChange}
+                                className='input'
                             />
                             {errors.firstName && <span className="error">{errors.firstName}</span>}
                         </div>
 
-                        <div>
+                        <div className='input-cont'>
                             <label>Last Name</label>
                             <input
                                 type="text"
                                 name="lastName"
                                 value={formValues.lastName}
                                 onChange={handleChange}
+                                className='input'
                             />
                             {errors.lastName && <span className="error">{errors.lastName}</span>}
                         </div>
 
-                        <div>
+                        <div className='input-cont'>
                             <label>Email</label>
                             <input
                                 type="email"
                                 name="email"
                                 value={formValues.email}
                                 onChange={handleChange}
+                                className='input'
                             />
                             {errors.email && <span className="error">{errors.email}</span>}
                         </div>
 
-                        <div>
+                        <div className='input-cont'>
                             <label>Course</label>
                             <select
                                 name="selectedCourse"
@@ -143,7 +147,7 @@ const Apply = (props) => {
                             {errors.selectedCourse && <span className="error">{errors.selectedCourse}</span>}
                         </div>
 
-                        <button type="submit">Apply</button>
+                        <button type="submit" className='submit-btn'>Apply</button>
                     </form>
                 )}
             </div>
