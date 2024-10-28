@@ -33,6 +33,11 @@ const Navbar = (props) => {
             WishList({wishlist?.length})
           </button>
         </Link>
+        <Link to='/applied'>
+          <button className="dropdown-toggle">
+            Applied
+          </button>
+        </Link>
         {/* <div className="dropdown">
           <p className="dropdown-toggle">Products</p>
           <div className="dropdown-content">

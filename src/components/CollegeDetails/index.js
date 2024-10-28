@@ -1,10 +1,12 @@
 import { useEffect, useState, useContext } from 'react';
+import { Link } from 'react-router-dom'
 import './index.css';
 import dataSet from '../data';
 import Navbar from '../Navbar';
 import { WishlistContext } from '../WishListContext';
 import Footer from '../Footer';
 import { SiGooglemaps } from "react-icons/si";
+import Swal from 'sweetalert2'
 
 const CollegeDetails = (props) => {
     const [data, setData] = useState(null);
@@ -31,8 +33,16 @@ const CollegeDetails = (props) => {
 
     const toggleWishlist = () => {
         if (isFav) {
+            Swal.fire("Removed from wishlist");
             removeFromWishlist(data.id);
         } else {
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "Added to wishlist",
+                showConfirmButton: false,
+                timer: 1500
+              });
             addToWishlist(data);
         }
         setFav(!isFav);
@@ -46,13 +56,15 @@ const CollegeDetails = (props) => {
                     <h2>{data.collegeName}</h2>
                     <p className='location'>Location: {data.location}</p>
                     <p className='desc'>{data.description}</p>
-                    <button className='apply-btn'>Apply Now</button><br/>
+                    <Link to={`/apply-form/${data.id}`}>
+                        <button className='apply-btn'>Apply Now</button><br />
+                    </Link>
                     <button className='apply-btn' onClick={toggleWishlist}>
                         {isFav ? 'Remove from wishlist' : 'Add to wishlist'}
                     </button>
                 </div>
                 <div className='image'>
-                    <img src='https://images.apiabroad.com/image/upload/ar_16:9,c_fill,g_auto,w_1600,h_900/v1691176508/programLead/null/32846470376_0346117db5_o_hpmpmx.jpg' alt="College"/>
+                    <img src='https://images.apiabroad.com/image/upload/ar_16:9,c_fill,g_auto,w_1600,h_900/v1691176508/programLead/null/32846470376_0346117db5_o_hpmpmx.jpg' alt="College" />
                 </div>
             </div>
             <h1 className='heading'>Programs</h1>

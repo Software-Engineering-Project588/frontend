@@ -50,7 +50,6 @@ class LoginPage extends Component {
     return (
       <div className="login-form-container">
         <form className="form-container" onSubmit={this.onSubmitForm}>
-
           <div className="input-container">
             <label htmlFor="Username" className="label">
               Username
