@@ -13,7 +13,7 @@ const AppliedColleges = () => {
             <div className='applied-colleges-content'>
                 <h2>Applied Colleges</h2>
                 {appliedData?.length === 0 ? (
-                    <p>No colleges applied yet.</p>
+                    <p className='no'>No colleges applied yet.</p>
                 ) : (
                     <ul>
                         {appliedData.map((application, index) => (

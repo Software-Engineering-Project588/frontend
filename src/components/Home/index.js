@@ -114,9 +114,9 @@ const Home = () => {
         </div>
       </div>
       <div className='suggestion'>
-        <h1 className='suggestion-heading'>Fare Finder™</h1>
+        <h1 className='suggestion-heading'>Fare Finder</h1>
         <p className='suggestion-description'>If you're looking to book travel for an academic experience, you are likely searching for the most affordable deal. In an effort to reduce financial barriers and increase access, we are offering the Fare Finder™ app right inside of APIConnect to provide access to discounted airfare for academic travel. With Fare Finder, we're making educational travel simpler and more accessible than ever before. .</p>
-        <p className='suggestion-yellow'>Learn More about Fare Finder</p>
+
       </div>
       <div className='faq-main'>
         <h1 className='faq-heading'>Answers to Your Most Common Questions</h1>
