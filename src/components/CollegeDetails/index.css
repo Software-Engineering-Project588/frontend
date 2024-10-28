@@ -152,11 +152,20 @@
     background-color: #007F80;
     color: #ffffff;
     border: none;
-    height: 30px;
-    width: 150px;
+    height: 35px;
+    width: 250px;
     font-weight: 500;
     cursor: pointer;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.apply-link{
+    text-decoration: none;
 }
 
 .map{

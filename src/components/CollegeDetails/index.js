@@ -56,7 +56,7 @@ const CollegeDetails = (props) => {
                     <h2>{data.collegeName}</h2>
                     <p className='location'>Location: {data.location}</p>
                     <p className='desc'>{data.description}</p>
-                    <Link to={`/apply-form/${data.id}`}>
+                    <Link className='apply-link' to={`/apply-form/${data.id}`}>
                         <button className='apply-btn'>Apply Now</button><br />
                     </Link>
                     <button className='apply-btn' onClick={toggleWishlist}>

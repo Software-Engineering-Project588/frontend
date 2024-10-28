@@ -56,7 +56,7 @@ const Programs = () => {
     return (
         <div className='programs-container'>
             <Navbar />
-            <div className='programs-content'>
+            <div className='programs-content'> 
                 <form className='search-bar' onSubmit={onSearchSubmit}>
                     <input
                         className='search-input'
