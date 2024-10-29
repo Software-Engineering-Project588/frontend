@@ -1,10 +1,60 @@
-/* Styles for RegisterPage */
+.register-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
 .register-container {
     max-width: 400px;
-    margin: 50px auto;
+    margin: auto;
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
-}
+    
+  }
+  
+  .register-title {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .register-error {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .register-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .register-input:focus {
+    border-color: #66afe9;
+    outline: none;
+  }
+  
+  .register-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #059696;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .register-button:hover {
+    background-color: #0d8b8b;
+  }
+  

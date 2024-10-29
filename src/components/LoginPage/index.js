@@ -26,6 +26,7 @@ const LoginPage = () => {
   };
 
   return (
+    <div className='login-main'>
     <div className="login-container">
       <h2>Login</h2>
       {error && <p className="error">{error}</p>}
@@ -41,10 +42,11 @@ const LoginPage = () => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button onClick={handleLogin}>Login</button>
+      <button className='login-btn' onClick={handleLogin}>Login</button>
       <p className="register-link">
         Don't have an account? <Link to="/register">Register here</Link>
       </p>
+    </div>
     </div>
   );
 };

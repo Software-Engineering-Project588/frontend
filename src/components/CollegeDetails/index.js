@@ -122,7 +122,7 @@ const CollegeDetails = (props) => {
                         <p>Type of Room: <span>{accommodation.typeOfRoom}</span></p>
                         <p>Area: <span>{accommodation.areaName}</span></p>
                         <p>Cost: <span>{accommodation.cost}</span></p>
-                        <a className='map' href='https://maps.app.goo.gl/VvvJ9HFcjWwcXG9g6'><SiGooglemaps />
+                        <a className='map' href='https://maps.app.goo.gl/JohiChaZStwkhnwz9'><SiGooglemaps />
                         </a>
                     </div>
                 ))}
